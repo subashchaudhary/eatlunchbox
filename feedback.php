@@ -29,7 +29,7 @@ if(isset($_POST['feedback-btn'])){
   $result = $conn->query($sql);
   if($result){
     echo "feedback is submitted";
-    header('location:index.php');
+        header("location:notification.php?customer_name='$customer_name' && phone='$phone'");
   }
   else{
     echo "not submitted";

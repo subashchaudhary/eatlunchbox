@@ -13,6 +13,29 @@
 
  -->
 
+<?php 
+include 'connection.php';
+
+if(isset($_POST['monthly-mess-btn'])){
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $reference_email = $_POST['reference-email'];
+  $phone = $_POST['phone'];
+  $address = $_POST['address'];
+ 
+ 
+  $sql = "INSERT INTO monthly_mess (name,address,phone,email,reference_email) values('$name','$address','$phone','$email','$reference_email')";
+
+  $result = $conn->query($sql);
+  if($result){
+    header("location:notification.php?customer_name='$customer_name' && phone='$phone'");
+  }
+  else{
+    echo "not submitted";
+  }
+}
+
+?>
 <!-- HTML -->
 <!DOCTYPE html>
 <html>
@@ -150,30 +173,4 @@
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
-<?php 
 
-include 'connection.php';
-
-if(isset($_POST['monthly-mess-btn'])){
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $reference_email = $_POST['reference-email'];
-  $phone = $_POST['phone'];
-  $address = $_POST['address'];
-
- 
-  $sql = "INSERT INTO monthly_mess (name,address,phone,email,reference_email) values('$name','$address','$phone','$email','$reference_email')";
-
-  $result = $conn->query($sql);
-  if($result){
-    echo "enquiry submitted";
-  }
-  else{
-    echo "not submitted";
-  }
-
-
-
-}
-
- ?>

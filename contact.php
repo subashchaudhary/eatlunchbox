@@ -16,23 +16,22 @@
  <?php 
 
  	if(isset($_POST['submit'])){
-	  $full_name = $_POST['full-name'];
-	  $email = $_POST['email'];
-	  $phone = $_POST['phone'];
-	  $message = $_POST['message'];
-
+		 $full_name = $_POST['full-name'];
+		 $email = $_POST['email'];
+		 $phone = $_POST['phone'];
+		 $message = $_POST['message'];
 	 
 	  $sql = "INSERT INTO contact_us (full_name,email,phone,message) values('$full_name','$email','$phone','$message')";
 
 	  $result = $conn->query($sql);
 	  if($result){
-	    echo "feedback is submitted";
-	    header('location:index.php');
+	  	echo "feedback is submitted";
+	  	header('location:index.php');
 	  }
 	  else{
 	    echo "not submitted";
 	  }
-
+}
   ?>
 
 <!DOCTYPE html>
@@ -178,7 +177,7 @@
 	</div>
 	<!-- End of footer -->
 	<!-- Bottom footer -->
-	  <nav class="navbar navbar-inverse no-margin">
+	 <nav class="navbar navbar-inverse no-margin">
 	<div class="container">
 	<div class="footer-bottom">
 		<center><h6 style="color: red;font-size: 25px;margin:0;">eatlunchbox.in</h6> 

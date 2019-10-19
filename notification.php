@@ -29,7 +29,7 @@ $mobileNumber = "7996648943,6265999142,7677240504";
 $senderId = "611332";
 
 //Your message to send, Add URL encoding here.
-$message = urlencode("Oder Made by:".$customer_name ." Phone No: ".$phone ." ");
+$message = urlencode("Oder Made by:".$customer_name." Phone No: ".$phone ." ");
 
 //Define route 
 $route = "default";

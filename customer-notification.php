@@ -29,7 +29,7 @@ $mobileNumber = $phone;
 $senderId = "611332";
 
 //Your message to send, Add URL encoding here.
-$message = urlencode("your order is placed.Total price to be paid: Rs 100");
+$message = urlencode("Your Query is send to us. We will call back you soon...");
 
 //Define route 
 $route = "default";

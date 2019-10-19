@@ -78,7 +78,7 @@ if(isset($_POST['login-btn'])){
           <a class="nav-link" href="order.php" id="menu"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Orders</a>
         </li> -->
          <li class="nav-item">
-          <a class="nav-link" href="catering-service.php" id="menu"><i class="fas fa-boxes"></i> E-Catering</a>
+          <a class="nav-link" href="../catering-service.php" id="menu"><i class="fas fa-boxes"></i> E-Catering</a>
         </li>
          <li class="nav-item">
           <a class="nav-link" href="contact.php" id="menu"><i class="fas fa-phone"></i> Contact Us</a>

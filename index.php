@@ -163,9 +163,9 @@ if(isset($_GET['filter-btn'])){
 					echo '<img src="img/veg-icon.png" alt="" height="20px" width="20px">  &nbsp; | <span id="sub-title"> &nbsp;'.$row['category'].'</span>';  
 					echo '<br/><br/>';
 				}
-				echo '<p id="price-text">Marked price : <span id="price" style="text-decoration:line-through;">Rs: 100</p>';
+				echo '<p id="price-text">Marked price : <span id="price" style="text-decoration:line-through;">Rs:'.$row['market_price'].'</p>';
 				echo '<p id="price-text">Our price : <span id="price">Rs:'.$row['price'].' </span></p>';
-				echo '<p><center><a href="order.php?name='.$row['name'].'&&category='.$row['category'].'&&price='.$row['price'].'"><button type="button" class="btn btn-outline-warning">Order Now</button></a></center></p></div></div>';
+				echo '<p><center><a href="order.php?name='.$row['name'].'&&category='.$row['category'].'&&price='.$row['price'].'"><button type="button" class="btn btn-outline-warning" name="order-btn">Order Now</button></a></center></p></div></div>';
 		        }
 		    }
 		?>

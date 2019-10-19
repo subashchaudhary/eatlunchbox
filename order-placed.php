@@ -25,8 +25,8 @@ if(isset($_POST['order-btn'])){
 	$phone=$_POST['phone'];
 	$address=$_POST['address'];
 	$quantity=$_POST['quantity'];
-	$total=$_POST['price'];
- 
+	$price=$_POST['price'];
+ 	$total = $quantity * $price;
 	$sql = "INSERT INTO orders(customer_name,email,phone,address,item_name,quantity,total) VALUES('$customer_name','$email','$phone','$address','$item_name','$quantity','$total')";
 
 	$result = $conn->query($sql);

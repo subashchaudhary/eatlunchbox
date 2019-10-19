@@ -15,11 +15,11 @@
 
 <?php 
 
+ 
 $name =$_GET['name'];
 $category = $_GET['category'];
 $price = $_GET['price'];
-// var_dump($name);
-
+ 
  ?>
 
 <!-- HTML -->
@@ -119,7 +119,7 @@ $price = $_GET['price'];
   
     <div class="form-group col-md-4">
       <label for="quantity">Quantity </label>
-      <input type="number" name="quantity" class="form-control" id="quantity" value="1" required/>
+      <input type="number" name="quantity" class="form-control" id="quantity" min="0" value="1" required/>
     </div>
     <div class="form-group col-md-2">
       <label for="total">Total:</label>
@@ -190,7 +190,7 @@ $price = $_GET['price'];
  $(function () {
             $("#quantity").change(function () {
                 // debugger;
-                var price = parseFloat($("#total").val());
+                var price = parseFloat("<?php echo $price; ?>");
                 var Qnt = parseFloat($("#quantity").val());
                 var total = parseFloat(price * Qnt);
                 $("#total").val(total);
