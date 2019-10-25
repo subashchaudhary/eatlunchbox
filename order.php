@@ -19,7 +19,7 @@
 $name =$_GET['name'];
 $category = $_GET['category'];
 $price = $_GET['price'];
- 
+$item_image = $_GET['image'];
  ?>
 
 <!-- HTML -->
@@ -79,7 +79,7 @@ $price = $_GET['price'];
     <div class="col-md-6 col-sm-6">
         <div class="items">
           <div class="item-img">
-            <img src="img/southveg.jpg" alt="food item">
+            <img src="<?php   echo $item_image; ?>" alt="food item">
           </div>
         <p id="item-name">Name : <?php  echo $name;?></p>
         <?php 
@@ -119,7 +119,7 @@ $price = $_GET['price'];
   
     <div class="form-group col-md-4">
       <label for="quantity">Quantity </label>
-      <input type="number" name="quantity" class="form-control" id="quantity" min="0" value="1" required/>
+      <input type="number" name="quantity" class="form-control" id="quantity" min="0" value="1" oninput="calcTotal()" required/>
     </div>
     <div class="form-group col-md-2">
       <label for="total">Total:</label>
@@ -187,15 +187,31 @@ $price = $_GET['price'];
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
- $(function () {
-            $("#quantity").change(function () {
-                // debugger;
+
+  var total = "<?php  echo $price; ?>";
+ $("#total").val(total);
+  function calcTotal(){
+
                 var price = parseFloat("<?php echo $price; ?>");
-                var Qnt = parseFloat($("#quantity").val());
-                var total = parseFloat(price * Qnt);
-                $("#total").val(total);
-            });
-        });
+                var Qnt = $("#quantity").val();
+                if(Qnt == "")
+                   $("#total").val(0);
+                else{
+                  Qnt = parseFloat($("#quantity").val());
+                  var total = parseFloat(price * Qnt);
+                  $("#total").val(total);
+                }
+             
+  }
+ // $(function () {
+ //            $("#quantity").change(function () {
+ //                // debugger;
+ //                var price = parseFloat("<?php echo $price; ?>");
+ //                var Qnt = parseFloat($("#quantity").val());
+ //                var total = parseFloat(price * Qnt);
+ //                $("#total").val(total);
+ //            });
+ //        });
 </script>
 </body>
 </html>
