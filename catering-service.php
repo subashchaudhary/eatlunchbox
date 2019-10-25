@@ -27,6 +27,35 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
+<style>
+  
+  #catering-img{
+    width: 100%;
+    height:450px;
+  } 
+  .service-desc{
+    background: #ef8920;
+    padding: 16px;
+  }
+  .display-6{
+    text-align: center;
+    color: #fff;
+  }
+#service-text{
+  color:#fff;
+  padding: 5px;
+  line-height: 30px;
+  text-align: center;
+  font-family: 12px;
+  font-family: sans-serif;
+}
+ hr {
+    max-width: 50px;
+    border-color: #f05f40;
+    border-width: 3px;
+  } 
+</style>
 <body>
 	
 <!-- main contents -->
@@ -64,17 +93,41 @@
 </nav>
 
 <div class="container"> 
-
-  <!-- catering service description -->
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Our Catering Service...!!</h1>
-      <p class="lead">We also provide our catering service  that helps to make the service .........</p>
+  <div class="row" style="margin-bottom: 0">
+    <div class="col-lg-12 col-md-12 text-center">
+        <h2 class="section-heading">Our Catering Servie </h2>
+        <hr class="primary"></hr>                 
     </div>
   </div>
 
+  <!-- catering service description -->
   <div class="row">
-  <div class="col-md-8">    
+    <div class="col-md-8">
+    <img src="img/catering-services.jpg" alt="catering servie image" id="catering-img"/>
+    <!-- <div class="container">
+      <h1 class="display-4">Our Catering Service...!!</h1>
+      <p class="lead">We also provide our catering service  that helps to make the service .........</p>
+    </div> -->
+  </div>
+  <div class="col-md-4">
+    <div class="service-desc">
+      <h2 class="display-6">Our Servie :</h2>
+      <hr style="border-color: #fff;border-width: 1px;margin:5px;">
+       <p id="service-text"> We also provide our catering service  that helps to make the service.
+       We also provide our catering service  that helps to make the service. We also provide our catering service  that helps to make the service. We also provide our catering service  that helps to make the service.We also provide our catering service  that helps to make the service. We also provide our catering service  that helps to make the service .........</p>
+    </div>
+  </div>
+  </div>
+  <div class="row" style="margin-bottom: 0">
+      <div class="col-lg-12 col-md-12 text-center">
+          <h4 class="section-heading">Submit Your Enquiry </h4> 
+           <hr class="primary"></hr>                  
+      </div>
+  </div>
+  <div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8"> 
+
 <!-- catering service enquiry -->
 <form method="POST" action="catering-service.php">
   <div class="form-row">
@@ -185,11 +238,10 @@ if(isset($_POST['catering-service'])){
 
 // mail service
 
-$to = "$subash.infoxit@gmail.com";
+$to = "subash.infoxit@gmail.com";
 $subject = "Catering Service";
 $txt = "your query has been send to us. we will notify you back...!!!";
-$headers = "From: info@eatlunchbox.in" . "\r\n" .
-"CC: somebodyelse@example.com";
+$headers = "From: info@eatlunchbox.in" . "\r\n" . "CC: somebodyelse@example.com";
 
 mail($to,$subject,$txt,$headers);
 

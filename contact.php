@@ -25,7 +25,7 @@
 
 	  $result = $conn->query($sql);
 	  if($result){
-	  	echo "feedback is submitted";
+	  	// echo "query is submitted";
 	  	header('location:index.php');
 	  }
 	  else{
