@@ -16,11 +16,10 @@
  <?php 
 
 // Database Conneciton
-
- $servername = "localhost";
- $username = "root";
- $password = "";
- $database = "eatlunchbox";
+$servername = "localhost";
+$username = "lunch";
+$password = "lunch@2019";
+$dbname = "lunchboxdb";
 
  $conn = new Mysqli($servername,$username,$password,$database);
  

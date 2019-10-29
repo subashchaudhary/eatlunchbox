@@ -78,7 +78,8 @@ if(isset($_POST['monthly-mess-btn'])){
   </style>
 </head>
 <body>
-  
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
 <!-- main contents -->
 <div class="container-fulid">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -150,24 +151,9 @@ if(isset($_POST['monthly-mess-btn'])){
 <br/><br/>
 
 </div>
-<!-- End of footer -->
-  <!-- Bottom footer -->
-    <nav class="navbar navbar-inverse no-margin">
-  <div class="container">
-  <div class="footer-bottom">
-    <center><h6 style="color: red;font-size: 25px;margin:0;">eatlunchbox.in</h6> 
-    <em style="color: #9c5e5e;font-size: 14px;">Online lunch ordering service</em>
-    <p>Copyright &copy eatlunchbox.in All Rgiht Reserved</p></center>
-  </div>
-  </div>
-  <div class="creator" style="float:right;">
-        <p id="creator-details" style="margin:0;color: #555555;font-weight: 500;">Creator : Subash Tharu </p>
-        <em style="color: #3e3c39;font-size: 14px;">subashtharu116@gmail.com</em>
-
-      </div>
-  </nav>
-  <!-- End of bottom fotter -->
-</footer>
+ 
+ <!-- footer -->
+ <?php  include 'footer.php'; ?>
 
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
