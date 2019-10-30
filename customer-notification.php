@@ -176,7 +176,7 @@ if(curl_errno($ch))
 <div class="container"> 
   <div class="row" style="margin-bottom: 0">
                 <div class="col-lg-12 col-md-12 text-center">
-                    <h2 class="section-heading">Your Order is Made Successful..!</h2>
+                    <h2 class="section-heading">Your feedback has submitted. Thank your for visiting us.</h2>
                     <hr class="primary"></hr>
       </div>
   </div>
